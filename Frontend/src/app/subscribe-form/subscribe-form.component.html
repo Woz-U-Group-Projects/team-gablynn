@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <label class="col-md-2 control-label">Name</label>
+    <div class="col-md-6 form-group">
+      <input class="form-control" placeholder="Name" [(ngModel)]="currentSubscribe.name">
+    </div>
+  </div>
+
+  <div class="row">
+    <label class="col-md-2 control-label">Email</label>
+    <div class="col-md-6 form-group">
+      <input class="form-control" placeholder="Email" [(ngModel)]="currentSubscribe.email">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-6">
+      <button class="btn btn-primary" (click)= "addSubscribe()" > Subscribe</button>
+    </div>
+  </div>
+</div>
