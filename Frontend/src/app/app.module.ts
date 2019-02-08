@@ -6,12 +6,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SubscribeFormComponent } from './subscribe-form/subscribe-form.component';
 import { SubscribeListComponent } from './subscribe-list/subscribe-list.component';
+import { AboutComponent } from './about/about.component';
+import { MinimalismComponent } from './minimalism/minimalism.component';
+import { TravelhacksComponent } from './travelhacks/travelhacks.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SubscribeFormComponent,
-    SubscribeListComponent
+    SubscribeListComponent,
+    AboutComponent,
+    MinimalismComponent,
+    TravelhacksComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule, FormsModule,
