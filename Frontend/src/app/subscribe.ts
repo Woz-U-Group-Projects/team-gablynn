@@ -1,4 +1,5 @@
 export class Subscribe {
-    name: string;
-    email: string;
+    FirstName: string;
+    LastName: string;
+    Email: string;
 }

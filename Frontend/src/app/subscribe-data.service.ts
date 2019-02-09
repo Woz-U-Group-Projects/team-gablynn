@@ -7,7 +7,7 @@ import { Observable, of } from 'rxjs';
 })
 export class SubscribeDataService {
 
-  subscribers: Subscribe[] = [{name: "Gabby Swanson", email: "gabrielle.swasnon94@gmail.com"} ];
+  subscribers: Subscribe[] = [{FirstName: "Gabby", LastName: "Swanson", Email: "gabrielle.swasnon94@gmail.com"} ];
 
 
   getSubscribe() : Observable<Subscribe[]> {
