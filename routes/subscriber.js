@@ -11,7 +11,7 @@ router.get("/", function(req, res, next) {
 router.post("/", function(req, res, next) {
   console.log(req.body);
   let newSubscriber = new models.Subscribers();
-  newSubscriber.SubscriberID = req.body.SubscriberID;
+  newSubscriber.name = req.body.name;
   newSubscriber.save().then(subscribers => res.json(subscribers));
 });
 
