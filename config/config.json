@@ -1,0 +1,17 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "./gablynn.sqlite",
+    "define": {
+      "timestamps": false
+    }
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": ":memory"
+  },
+  "production": {
+    "dialect": "sqlite",
+    "storage": "./gablynn.sqlite"
+  }
+}

@@ -1,17 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const sqlite = require('sqlite3').verbose();
 
-const db = new sqlite.Database('./gablynn.sqlite', err => {
-  if (err) {
-    return console.error(err.message);
-  }
-  console.log('Yay! You are connected to the database!');
-});
-
-/* GET home page. */
+/* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.send('respond with a resource');
 });
 
 module.exports = router;
