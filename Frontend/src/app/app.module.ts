@@ -13,6 +13,8 @@ import { TravelhacksComponent } from './travelhacks/travelhacks.component';
 import { ContactComponent } from './contact/contact.component';
 import { PostsComponent } from './posts/posts.component';
 import { CommentsComponent } from './comments/comments.component';
+import { PostsService } from './services/posts.service';
+import { CommentsService } from './services/comments.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,7 @@ import { CommentsComponent } from './comments/comments.component';
     BrowserModule, FormsModule,
     AppRoutingModule, HttpClientModule
   ],
-  providers: [],
+  providers: [PostsService, CommentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
