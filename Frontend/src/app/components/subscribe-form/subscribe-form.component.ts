@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SubscribeDataService } from '../subscribe-data.service';
-import { Subscribe } from '../subscribe';
+import { SubscribeDataService } from '../../services/subscribe-data.service';
+import { Subscribe } from '../../subscribe';
 
 
 @Component({
