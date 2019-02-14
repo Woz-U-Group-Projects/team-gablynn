@@ -11,6 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { MinimalismComponent } from './minimalism/minimalism.component';
 import { TravelhacksComponent } from './travelhacks/travelhacks.component';
 import { ContactComponent } from './contact/contact.component';
+import { PostsComponent } from './posts/posts.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     MinimalismComponent,
     TravelhacksComponent,
-    ContactComponent
+    ContactComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule, FormsModule,
