@@ -12,6 +12,7 @@ import { MinimalismComponent } from './minimalism/minimalism.component';
 import { TravelhacksComponent } from './travelhacks/travelhacks.component';
 import { ContactComponent } from './contact/contact.component';
 import { PostsComponent } from './posts/posts.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PostsComponent } from './posts/posts.component';
     MinimalismComponent,
     TravelhacksComponent,
     ContactComponent,
-    PostsComponent
+    PostsComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule, FormsModule,
