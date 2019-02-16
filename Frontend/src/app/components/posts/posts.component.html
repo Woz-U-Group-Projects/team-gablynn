@@ -6,9 +6,17 @@
           <input name="title" type="text" class="form-control" placeholder="Enter title">
       </div>
       <div class="form-group">
+          <label>Post Topic</label>
+          <form>
+            <select id="TopicList" onchange="BlogTopics()">
+                <option>Minimalism</option>
+                <option>Travel Hacks</option>
+            </select>
+          </form>
+      </div>
+      <div class="form-group">
           <label>Description</label>
-          <textarea name="description" class="form-control" placeholder="Type Text Here">
-          </textarea>
+          <textarea name="description" class="form-control" placeholder="Type Text Here"></textarea>
       </div>
 
       
