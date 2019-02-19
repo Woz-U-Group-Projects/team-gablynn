@@ -16,6 +16,7 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { PostsService } from './services/posts.service';
 import { CommentsService } from './services/comments.service';
 import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { HeaderComponent } from './components/header/header.component';
     PostsComponent,
     CommentsComponent,
     HeaderComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule, FormsModule,
