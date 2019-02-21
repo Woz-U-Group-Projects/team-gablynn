@@ -15,6 +15,9 @@ import { PostsComponent } from './components/posts/posts.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { PostsService } from './services/posts.service';
 import { CommentsService } from './services/comments.service';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { CommentsService } from './services/comments.service';
     TravelhacksComponent,
     ContactComponent,
     PostsComponent,
-    CommentsComponent
+    CommentsComponent,
+    HeaderComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule, FormsModule,

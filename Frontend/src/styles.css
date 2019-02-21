@@ -1,9 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-img {
-    color: white;
-}
 footer {
     padding-top: 3rem;
     padding-bottom: 3rem;
