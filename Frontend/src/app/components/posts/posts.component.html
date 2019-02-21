@@ -1,10 +1,12 @@
 <div class="PostForm">
  
-  <form>
+  <form ngSubmit="onSubmit()">
+      
       <div class="form-group">
           <label>Title</label>
-          <input name="title" type="text" class="form-control" placeholder="Enter title">
-      </div>
+          <input required ngModel name ="title" #title="ngModel" (change)="log(title)" id="title" type="text" class="form-control" placeholder="Enter title">
+        <div class="alert alert-danger" *ngIf="title.touched && !title.valid">Title is required.</div>
+        </div>
       
       <input type="file" (change) ="onFileSelected($event)">
 
@@ -19,8 +21,9 @@
       </div>
       <div class="form-group">
           <label>Description</label>
-          <textarea name="description" class="form-control" placeholder="Type Text Here"></textarea>
-      </div>
+          <textarea required ngModel name ="description" #description="ngModel" (change)="log(description)" id="description" class="form-control" placeholder="Type Text Here"></textarea>
+          <div class="alert alert-danger" *ngIf="description.touched && !description.valid">Description is required.</div>
+        </div>
 
       
       <button type="button" class="btn btn-primary" (click)="onUpload()"> Post</button>

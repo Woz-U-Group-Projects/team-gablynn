@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ROUTING } from 'src/app/app-routing.module';
 import { FormsModule} from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 
-import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './components/login/login.component';
 import { AppComponent } from './app.component';
 import { SubscribeFormComponent } from './components/subscribe-form/subscribe-form.component';
 import { SubscribeListComponent } from './components/subscribe-list/subscribe-list.component';
@@ -17,6 +18,8 @@ import { PostsService } from './services/posts.service';
 import { CommentsService } from './services/comments.service';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { RootComponent } from './components/root/root.component';
+
 
 
 @NgModule({
@@ -32,12 +35,13 @@ import { HomeComponent } from './components/home/home.component';
     CommentsComponent,
     HeaderComponent,
     HomeComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule, FormsModule,
-    AppRoutingModule, HttpClientModule
+    ROUTING, HttpClientModule
   ],
   providers: [PostsService, CommentsService],
-  bootstrap: [AppComponent]
+  bootstrap: [RootComponent]
 })
 export class AppModule { }
