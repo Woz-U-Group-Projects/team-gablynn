@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { PostsService } from '../../services/posts.service';
 import { HttpClient } from 'selenium-webdriver/http';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-posts',
@@ -8,22 +9,20 @@ import { HttpClient } from 'selenium-webdriver/http';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  //selectedFile: File = null;
+  
+  modalRef: BsModalRef;
 
-  //constructor(private http: HttpClient) { }
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template, { class: 'modal-sm' });
+    console.log(this.modalRef);
+  }
 
-// onFileSelected(event){
- //  this.selectedFile = <File>event.target.files[0];
- // }
+  closeModal(){
+    console.log(this.modalRef);
+    this.modalRef.hide();
+  }
 
-  //onUpload(){
-    //const fd = new FormData();
-    //fd.append('image', this.selectedFile, this.selectedFile.name)
-    //this.http.post('fd')
-    //.subscribe(res =>{
-    //  console.log(res);
-    //})
-  //} 
+  constructor(private modalService: BsModalService) { }
 
   ngOnInit() {
   }
