@@ -1,5 +1,8 @@
 <body>
-    <div class="post">
-      <app-posts></app-posts>
-    </div>
+    <main role="main">
+   
+      <app-minimalism></app-minimalism>
+      <app-posts (postAdded)="handlePostAdded()"></app-posts>
+      
+  </main>
   </body>

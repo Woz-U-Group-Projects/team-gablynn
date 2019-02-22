@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ROUTING } from 'src/app/app-routing.module';
+import { AppRouting } from 'src/app/app-routing.module';
 import { FormsModule} from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 
@@ -14,11 +14,11 @@ import { TravelhacksComponent } from './components/travelhacks/travelhacks.compo
 import { ContactComponent } from './components/contact/contact.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { CommentsComponent } from './components/comments/comments.component';
-import { PostsService } from './services/posts.service';
-import { CommentsService } from './services/comments.service';
+import { CommentsService } from './components/comments/comments.service';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { RootComponent } from './components/root/root.component';
+import { SubmitPostService } from './components/posts/submit-post.service';
 
 
 
@@ -39,9 +39,9 @@ import { RootComponent } from './components/root/root.component';
   ],
   imports: [
     BrowserModule, FormsModule,
-    ROUTING, HttpClientModule
+    AppRouting, HttpClientModule
   ],
-  providers: [PostsService, CommentsService],
-  bootstrap: [RootComponent]
+  providers: [SubmitPostService, CommentsService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

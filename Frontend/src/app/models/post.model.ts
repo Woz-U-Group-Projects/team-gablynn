@@ -1,5 +1,12 @@
 export class Post {
-    title: string;
-    description: string;
-    topic: string; //"minimalism" or "travel hacks"
+    [x: string]: string;	
+constructor(){
+    this.id = '';
+    this.title = '';
+    this.description = '';
+    this.topics = ''; //"minimalism" or "travel hacks"
+}
+public id;
+public title;
+public description;
 }

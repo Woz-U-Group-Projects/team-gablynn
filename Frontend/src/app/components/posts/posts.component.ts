@@ -1,19 +1,49 @@
-import { Component, OnInit } from '@angular/core';
-import { PostsService } from '../../services/posts.service';
-import { HttpClient } from '@angular/common/http';
-import { SubmitPostService } from '../../services/submit-post.service'
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { SubmitPostService } from 'src/app/components/posts/submit-post.service';
 import { Post } from 'src/app/models/post.model';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
-  styleUrls: ['./posts.component.css']
+  styleUrls: ['./posts.component.css'],
+  providers: [ SubmitPostService ]
 })
 export class PostsComponent implements OnInit {
+  ngOnInit(): void {
+    //throw new Error("Method not implemented.");
+  }
  
+  @ViewChild('closeBtn') closeBtn: ElementRef;
+  public post : Post;
 
-SubmittedPost = new Post ();
-  _SubmitPostService: any;
+  constructor(private submitPostService: SubmitPostService, private router: Router){
+  	this.post = new Post();
+  }
+
+  addPost() {
+  	if(this.post.title && this.post.description){
+  		this.submitPostService.addPost(this.post).subscribe(res =>{
+  			this.closeBtn.nativeElement.click();
+        this.router.navigate (['/','minimalism']);
+  		});
+  	} else {
+      alert('Title and Description required');
+      console.log(this.post.topics);
+      if(this.post.topics=="Minimalism"){
+        this.router.navigate (['/','minimalism']);
+      } else {
+        this.router.navigate (['/','travelhacks']);
+      }
+
+  	}
+  }
+
+}
+//SubmittedPost = new Post ();
+  //_SubmitPostService: any;
   
   //onSubmit() {
    // this._submitPostService.submit(this.SubmittedPost)
@@ -23,26 +53,25 @@ SubmittedPost = new Post ();
     //)
    //}
 
-  log(x) {console.log(x); };
+  //log(x) {console.log(x); };
 
-  selectedFile: File = null;
+  //selectedFile: File = null;
 
-  constructor(private http: HttpClient, _submitPostService: SubmitPostService) { }
+  //constructor(private http: HttpClient, _submitPostService: SubmitPostService) { }
 
-onFileSelected(event){
- this.selectedFile = <File>event.target.files[0];
- }
+//onFileSelected(event){
+ //this.selectedFile = <File>event.target.files[0];
+// }
 
-  onUpload(){
-    const fd = new FormData();
-    fd.append('image', this.selectedFile, this.selectedFile.name)
-    this.http.post('', 'fd')
-    .subscribe(res =>{
-     console.log(res);
-    })
-  } 
+  //onUpload(){
+   // const fd = new FormData();
+    //fd.append('image', this.selectedFile, this.selectedFile.name)
+    //this.http.post('', 'fd')
+    //.subscribe(res =>{
+    // console.log(res);
+    //})
+  //} 
 
-  ngOnInit() {
-  }
+  //ngOnInit() {
+  //}
 
-}

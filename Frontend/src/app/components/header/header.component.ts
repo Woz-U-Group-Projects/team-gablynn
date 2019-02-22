@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscribe } from 'src/app/subscribe';
-import { SubscribeDataService } from 'src/app/services/subscribe-data.service';
+import { Subscribe } from 'src/app/models/subscribe';
+import { SubscribeDataService } from 'src/app/components/subscribe-form/subscribe-data.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +9,7 @@ import { SubscribeDataService } from 'src/app/services/subscribe-data.service';
 })
 export class HeaderComponent implements OnInit {
 
-  subscribers: Subscribe[];
+  subscribers: Subscribe[]=[];
 
   constructor(private subscribeDataService : SubscribeDataService) {
     subscribeDataService.getSubscribe().subscribe(s => (this.subscribers = s));
