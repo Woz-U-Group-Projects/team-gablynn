@@ -13,7 +13,7 @@ export class PostsComponent implements OnInit {
   modalRef: BsModalRef;
 
   openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template, { class: 'modal-sm' });
+    this.modalRef = this.modalService.show(template, { class: 'modal-md' });
     console.log(this.modalRef);
   }
 
