@@ -9,7 +9,7 @@ import { SubscribeDataService } from 'src/app/services/subscribe-data.service';
 })
 export class HeaderComponent implements OnInit {
 
-  subscribers: Subscribe[];
+  subscribers: Subscribe[]=[];
 
   constructor(private subscribeDataService : SubscribeDataService) {
     subscribeDataService.getSubscribe().subscribe(s => (this.subscribers = s));

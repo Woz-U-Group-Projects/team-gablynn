@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule} from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { ModalModule } from 'ngx-bootstrap/modal';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +37,7 @@ import { HomeComponent } from './components/home/home.component';
   ],
   imports: [
     BrowserModule, FormsModule,
-    AppRoutingModule, HttpClientModule, ModalModule.forRoot()
+    AppRoutingModule, HttpClientModule, ModalModule.forRoot(), NgbModule
   ],
   providers: [PostsService, CommentsService],
   bootstrap: [AppComponent]
