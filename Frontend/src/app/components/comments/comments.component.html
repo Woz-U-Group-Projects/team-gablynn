@@ -1,14 +1,27 @@
-<div class="CommentForm">
- 
-  <form>
+
+<button type="button" class="btn btn-primary" (click)="openModal(template)">Comment</button>
+
+<ng-template #template>
+  <div class="comment-header">
+      <h4>Comment</h4>
+      <button type="button" class="close pull right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+
+  <div class="CommentForm">
+    <form>
       <div class="form-group">
-          <label>Comment</label>
-          <textarea name="description" class="form-control" placeholder="Comment Here"></textarea>
+          <label>Comment Here:</label>
+          <textarea name="description" class="form-control" placeholder="Type Text Here"></textarea>
       </div>
 
-      <button type="button" class="btn btn-primary">Comment</button>
-      
-  </form>
+      <button type="button" class="btn btn-success">Comment</button>
+        
+    </form>
+  </div><br>
 
-
-</div>
+  <div class="comment-footer">
+      <button type="button" class="btn btn-default" (click)="modalRef.hide()">Close</button>
+  </div>
+  </ng-template>
