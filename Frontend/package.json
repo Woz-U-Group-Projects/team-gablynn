@@ -19,6 +19,7 @@
     "@angular/platform-browser": "^7.2.4",
     "@angular/platform-browser-dynamic": "^7.2.4",
     "@angular/router": "^7.2.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
     "@ng-bootstrap/ng-bootstrap": "^4.0.4",
     "@types/jest": "^24.0.5",
     "@types/mocha": "^5.2.6",
