@@ -12,7 +12,7 @@ footer {
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #111; /* Black */
+    background-color: rgb(54, 56, 59); 
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 100px;
   }
@@ -63,18 +63,18 @@ footer {
     box-shadow: 1px 1px 3px #333; 
 }
 .social-icons.icon-zoom .fa:hover, .social-icons.icon-zoom .fa:active { 
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1); 
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); 
 }
 .social-icons.icon-rotate .fa:hover, .social-icons.icon-rotate .fa:active { 
-    -webkit-transform: scale(1.1) rotate(360deg);
-    -moz-transform: scale(1.1) rotate(360deg);
-    -ms-transform: scale(1.1) rotate(360deg);
-    -o-transform: scale(1.1) rotate(360deg);
-    transform: scale(1.1) rotate(360deg);
+    -webkit-transform: scale(1.2) rotate(360deg);
+    -moz-transform: scale(1.2) rotate(360deg);
+    -ms-transform: scale(1.2) rotate(360deg);
+    -o-transform: scale(1.2) rotate(360deg);
+    transform: scale(1.2) rotate(360deg);
 }
 
 .social-icons .fa-instagram{background-color: #f442ce;}
