@@ -19,6 +19,7 @@ import { PostsService } from './services/posts.service';
 import { CommentsService } from './services/comments.service';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { LikesComponent } from './components/likes/likes.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { HomeComponent } from './components/home/home.component';
     CommentsComponent,
     HeaderComponent,
     HomeComponent,
+    LikesComponent,
   ],
   imports: [
     BrowserModule, FormsModule,
