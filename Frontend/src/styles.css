@@ -86,8 +86,6 @@ footer {
 
 #like-button{
     border-radius: 8px;
-    width: 70px;
-    height: 30px;
 }
 
 #like-button :hover{
@@ -96,8 +94,6 @@ footer {
 
 #dislike-button{
     border-radius: 8px;
-    width: 70px;
-    height: 30px;
 }
 
 #dislike-button :hover{
