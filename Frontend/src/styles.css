@@ -83,3 +83,23 @@ footer {
 .social-icons .fa-facebook,.social-icons .fa-facebook-square{background-color:#3C599F;}  
 .social-icons .fa-twitter,.social-icons .fa-twitter-square{background-color:#32CCFE;} 
 .social-icons .fa-linkedin,.social-icons .fa-linkedin-square{background-color:#0085AE;} 
+
+#like-button{
+    border-radius: 8px;
+    width: 70px;
+    height: 30px;
+}
+
+#like-button :hover{
+    background-color: lightgreen;
+}
+
+#dislike-button{
+    border-radius: 8px;
+    width: 70px;
+    height: 30px;
+}
+
+#dislike-button :hover{
+    background-color: lightcoral;
+}

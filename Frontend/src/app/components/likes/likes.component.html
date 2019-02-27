@@ -1,6 +1,5 @@
 <div class="card-body">
-  <h5 class="card-title">Number of Likes</h5>
-  <p class="card-text">{{ numberOfLikes }}</p>
-  <button class="btn btn-link" (click)="likeButtonClick()">Like</button>
-  <button class="btn btn-link" (click)="dislikeButtonClick()">Dislike</button>
+  <h4 class="card-text glyphicon glyphicon-heart">{{ numberOfLikes }}</h4>
+  <button id="like-button" class="btn btn-default glyphicon glyphicon-thumbs-up" (click)="likeButtonClick()">Like</button>
+  <button id="dislike-button" class="btn btn-default  glyphicon glyphicon-thumbs-down" (click)="dislikeButtonClick()">Na</button>
 </div>
