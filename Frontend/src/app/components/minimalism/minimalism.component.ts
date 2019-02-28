@@ -9,7 +9,7 @@ export class MinimalismComponent implements OnInit {
 
   constructor() {
     let root = document.documentElement;
-    root.style.setProperty("--bg-image","url(http://knowledge.ckgsb.edu.cn/wp-content/uploads/2017/10/simple-minimalism.jpg)");
+    root.style.setProperty("--bg-image","url(https://www.listenmoneymatters.com/wp-content/uploads/2014/11/LMM-Cover-Images-6.jpg)");
    }
 
   ngOnInit() {
