@@ -1,13 +1,14 @@
-.page-container{
+/*.page-container{
     background-image: url(https://botanalytics.co/blog/wp-content/uploads/2017/06/1.jpeg); 
     background-size: 100%; 
     background-position: center;
+    padding:5px;
 }
-
+*/
 h1{
     color: white;
 }
 
 h5{
     color: white;
-}
+} 

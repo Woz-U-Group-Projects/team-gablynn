@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
+:root {
+    --bg-image: url(https://botanalytics.co/blog/wp-content/uploads/2017/06/1.jpeg);
+    --bg-image2: url(http://knowledge.ckgsb.edu.cn/wp-content/uploads/2017/10/simple-minimalism.jpg);
+}
+
+
 footer {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -88,7 +94,7 @@ footer {
     border-radius: 8px;
 }
 
-#like-button :hover{
+#like-button:hover{
     background-color: lightgreen;
 }
 
@@ -96,6 +102,7 @@ footer {
     border-radius: 8px;
 }
 
-#dislike-button :hover{
+#dislike-button:hover{
     background-color: lightcoral;
 }
+

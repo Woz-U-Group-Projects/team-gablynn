@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MinimalismComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    let root = document.documentElement;
+    root.style.setProperty("--bg-image","url(http://knowledge.ckgsb.edu.cn/wp-content/uploads/2017/10/simple-minimalism.jpg)");
+   }
 
   ngOnInit() {
+    
   }
 
 }
