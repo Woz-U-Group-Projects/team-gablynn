@@ -19,9 +19,6 @@ export class PostsComponent implements OnInit {
   ]
   posts: Post[];
   submitPost: Post = new Post();
- 
-  //Do I need this?
-  //@ViewChild('closeBtn') closeBtn: ElementRef;
 
   @ViewChild("fileInput")
   fileInput;
@@ -35,14 +32,13 @@ export class PostsComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log('hello world');
+    //console.log('hello world');
     console.log(this.submitPost);
     this.submitPostService.addPost(this.submitPost).subscribe(f => {
       if (this.submitPost.topics == "Minimalism") {
         this.router.navigate(['/', 'minimalism']);
       } else {
         this.router.navigate(['/', 'travelhacks']);
-        //return this.http.post<Post>(this.url, formData);
       }
       this.submitPost = new Post();
       this.fileInput.nativeElement.value = null;

@@ -10,9 +10,9 @@
   providers: [ MinimalismPostService ]
 })
  export class MinimalismComponent implements OnInit {
-   ngOnInit(): void {
-     throw new Error("Method not implemented.");
-   }
+  //  ngOnInit(): void {
+  //    throw new Error("Method not implemented.");
+  //  }
 
   public posts : any [];
 
@@ -20,13 +20,13 @@
   	
   }
 
-  // ngOnInit(){
-  //  	this.getAllPost();
+  ngOnInit(){
+   	// this.getAllPost();
 
-  //    this.submitPostService.postAdded_Observable.subscribe(res => {
-  //      this.getAllPost();
-  //    });
-  // }
+    //  this.submitPostService.postAdded_Observable.subscribe(res => {
+    //    this.getAllPost();
+    //  });
+  }
 
 
 

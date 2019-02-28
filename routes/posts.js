@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-//let Post = require("../models/post");
+const sqlite = require("sqlite3").verbose();
 var models = require("../models")
 var multer = require("multer");
 var mime = require("mime");
@@ -24,16 +24,13 @@ var upload = multer({ storage: storage });
 
 router.get("/", function(req, res, next) {
   models.Post.findAll()
-    .then(result => res.send(result))
-    .catch(error => res.status(500).send(error));
+    .then(posts => res.send(posts))
 });
 
 router.post("/", upload.single("image"), function(req, res, next) {
   let submitPost = new models.Post();
    submitPost.name = req.body.name;
-  // submitPost.image = req.file.filename;
-
-  submitPost.image =
+   submitPost.image =
     req.protocol + "://" + req.get("host") + "/public/" + req.file.filename;
 
   submitPost

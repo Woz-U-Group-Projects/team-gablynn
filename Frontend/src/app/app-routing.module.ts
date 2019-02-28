@@ -27,5 +27,4 @@ const appRoutes : Routes = [
  exports: [RouterModule]
 })
 
-//export const ROUTING: ModuleWithProviders = RouterModule.forRoot(AppRoutes);
 export class AppRouting{}
