@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SubscribeDataService } from '../subscribe-form/subscribe-data.service';
-import { Subscribe } from '../../models/subscribe';
+import { Subscribe } from '../../../../models/subscribe';
 
 @Component({
   selector: 'app-subscribe-list',

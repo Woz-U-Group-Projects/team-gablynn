@@ -4,9 +4,7 @@ constructor(){
     this.id = '';
     this.title = '';
     this.description = '';
-    this.topics = ''; //"minimalism" or "travel hacks"
+    this.topicList = ''; //"minimalism" or "travel hacks"
+    this.image = '';
 }
-public id;
-public title;
-public description;
 }

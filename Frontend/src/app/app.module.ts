@@ -17,7 +17,6 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { CommentsService } from './components/comments/comments.service';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
-import { RootComponent } from './components/root/root.component';
 import { SubmitPostService } from './components/posts/submit-post.service';
 
 

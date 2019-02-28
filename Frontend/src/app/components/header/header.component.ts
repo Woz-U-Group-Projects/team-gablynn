@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscribe } from 'src/app/models/subscribe';
+import { Subscribe } from '../../../../models/subscribe';
 import { SubscribeDataService } from 'src/app/components/subscribe-form/subscribe-data.service';
 
 @Component({
