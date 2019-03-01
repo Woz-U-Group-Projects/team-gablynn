@@ -37,20 +37,13 @@ import { SubmitPostService } from './components/posts/submit-post.service';
     CommentsComponent,
     HeaderComponent,
     HomeComponent,
-<<<<<<< HEAD
     LikesComponent,
   ],
   imports: [
-    BrowserModule, FormsModule,
-    AppRoutingModule, HttpClientModule, ModalModule.forRoot(), NgbModule
-=======
+    BrowserModule, FormsModule, AppRouting, HttpClientModule, ModalModule.forRoot(), NgbModule,
     LoginComponent,
   ],
-  imports: [
-    BrowserModule, FormsModule,
-    AppRouting, HttpClientModule
->>>>>>> gabby
-  ],
+
   providers: [SubmitPostService, CommentsService],
   bootstrap: [AppComponent]
 })

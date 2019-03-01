@@ -1,7 +1,5 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
-import { CommentsService } from '../../services/comments.service';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
-import { Component, OnInit } from '@angular/core';
 import { CommentsService } from './comments.service';
 
 @Component({

@@ -1,8 +1,5 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
-import { PostsService } from '../../services/posts.service';
-import { HttpClient } from 'selenium-webdriver/http';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit, TemplateRef } from '@angular/core';
 import { SubmitPostService } from 'src/app/components/posts/submit-post.service';
 import { Post } from '../../../../models/post.model';
 import { Router } from '@angular/router';
@@ -31,6 +28,7 @@ export class PostsComponent implements OnInit {
   }
 
   constructor(private modalService: BsModalService) { }
+  constructor(private submitPostService: SubmitPostService, private router: Router){}
   topicList: TopicList[] = [
     {id: 1, name: 'Minimalism'},
     {id: 2, name: 'Travel Hacks'},
@@ -64,7 +62,7 @@ export class PostsComponent implements OnInit {
     });
   }
 
-  constructor(private submitPostService: SubmitPostService, private router: Router){}
+ 
   	ngOnInit() {
       this.getPost();
     }
