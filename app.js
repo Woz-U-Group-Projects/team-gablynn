@@ -8,6 +8,7 @@ var cors = require("cors");
 
 var indexRouter = require('./routes/index');
 var subscribeRouter = require('./routes/subscriber');
+var postRouter = require('./routes/posts')
 
 var app = express();
 
@@ -22,6 +23,7 @@ app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/subscriber', subscribeRouter);
+app.use('/posts', postRouter);
 
 models.sequelize.sync().then(function() {
   console.log("DB Sync'd up");

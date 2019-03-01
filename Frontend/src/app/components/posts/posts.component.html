@@ -10,33 +10,70 @@
 
 <div class="post-form">
   <form>
+<div class="PostForm">
+ 
+  <form (ngSubmit)="onSubmit()">
+      
       <div class="form-group">
           <label>Title</label>
-          <input name="title" type="text" class="form-control" placeholder="Enter title">
-      </div>
+          <input required  name="title" [(ngModel)]="submitPost.title"  #title="ngModel"  id="title" type="text" class="form-control" placeholder="Enter title">
+        <div class="alert alert-danger" *ngIf="title.touched && !title.valid">Title is required.</div>
+        </div>
       
-      <input type="file" (change) ="onFileSelected($event)">
+        <input
+        id="image"
+        type="file"
+        accept="image/*"
+        (change)="onFileChanged($event)"
+        name="image"
+        #fileInput
+      />
+
+      <ul>
+        <li *ngFor="let image of images">
+          {{ post.name }}
+          <img src="{{ post.image }}" width="400" />
+        </li>
+      </ul>
 
       <div class="form-group">
           <label>Post Topic</label>
           <form>
-            <select id="TopicList" onchange="BlogTopics()">
-                <option>Minimalism</option>
-                <option>Travel Hacks</option>
-            </select>
-          </form>
+          <select id="topicList" name= "topicList" 
+          class="form-control">
+            <option *ngFor='let topic of topicList' [value]='topic.id'> 
+              {{topic.name}}
+            </option>
+        </select>
+      </form>
       </div>
       <div class="form-group">
           <label>Description</label>
+<<<<<<< HEAD
           <textarea name="description" class="form-control" placeholder="Type Text Here"></textarea>
       </div>
 
       
       <button type="button" class="btn btn-success btn-md" (click)="onUpload()">Post</button> 
+=======
+          <textarea  name="description" required [(ngModel)]="submitPost.description" #description="ngModel" id="description" class="form-control" placeholder="Type Text Here"></textarea>
+          <div class="alert alert-danger" *ngIf="description.touched && !description.valid">Description is required.</div>
+        </div>
+        
+      <button type="submit" class="btn btn-primary">Post</button>
+       
+>>>>>>> gabby
   </form>
 </div><br>
 
+<<<<<<< HEAD
 <div class="post-footer">
     <button type="button" class="btn btn-default btn-sm" (click)="modalRef.hide()">Close</button>
 </div>
 </ng-template>
+=======
+  <router-outlet></router-outlet>
+</div>
+
+<router-outlet></router-outlet>
+>>>>>>> gabby
