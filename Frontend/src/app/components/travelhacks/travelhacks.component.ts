@@ -12,6 +12,7 @@ export class TravelhacksComponent implements OnInit {
     root.style.setProperty(
       '--bg-image', 'url(https://botanalytics.co/blog/wp-content/uploads/2017/06/1.jpeg)'
       );
+      
   }
 
   ngOnInit() {
