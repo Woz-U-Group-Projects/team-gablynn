@@ -21,11 +21,11 @@
   }
 
   ngOnInit(){
-   	// this.getAllPost();
+   	this.getAllPost();
 
-    //  this.submitPostService.postAdded_Observable.subscribe(res => {
-    //    this.getAllPost();
-    //  });
+     this.submitPostService.postAdded_Observable.subscribe(res => {
+       this.getAllPost();
+     });
   }
 
 
