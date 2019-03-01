@@ -9,9 +9,9 @@ import { SubscribeDataService } from 'src/app/components/subscribe-form/subscrib
 })
 export class HeaderComponent implements OnInit {
 
-  subscribers: Subscribe[]=[];
+  subscribers: Subscribe[] = [];
 
-  constructor(private subscribeDataService : SubscribeDataService) {
+  constructor(private subscribeDataService: SubscribeDataService) {
     subscribeDataService.getSubscribe().subscribe(s => (this.subscribers = s));
    }
 

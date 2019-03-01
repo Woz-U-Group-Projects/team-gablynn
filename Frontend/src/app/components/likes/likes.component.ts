@@ -7,24 +7,21 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class LikesComponent {
 
-  @Input() numberOfLikes: number = 0;
+  @Input() numberOfLikes = 0;
 
   @Output()
   change: EventEmitter<number> = new EventEmitter<number>();
-  
-  likeButtonClick(){
+
+  likeButtonClick() {
     this.numberOfLikes++;
     this.change.emit(this.numberOfLikes);
   }
 
-  dislikeButtonClick(){
+  dislikeButtonClick() {
     this.numberOfLikes--;
     this.change.emit(this.numberOfLikes);
   }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor() {}
 
 }

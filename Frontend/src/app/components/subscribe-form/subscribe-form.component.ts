@@ -9,14 +9,14 @@ import { Subscribe } from '../../../../models/subscribe';
   styleUrls: ['./subscribe-form.component.css']
 })
 export class SubscribeFormComponent implements OnInit {
-  currentSubscribe : Subscribe = new Subscribe();
+  currentSubscribe: Subscribe = new Subscribe();
 
   addSubscribe(): void {
     this.subscibeDataService.addSubscribe(this.currentSubscribe);
     this.currentSubscribe = new Subscribe();
   }
 
-  constructor(private subscibeDataService : SubscribeDataService) {}
+  constructor(private subscibeDataService: SubscribeDataService) {}
 
   ngOnInit() {
   }

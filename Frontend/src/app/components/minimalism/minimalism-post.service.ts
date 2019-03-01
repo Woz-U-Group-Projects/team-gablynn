@@ -7,12 +7,13 @@ import { Post } from '../../../../models/post.model';
 })
 export class MinimalismPostService {
 
-    constructor(private http: HttpClient){
+    constructor(private http: HttpClient) {
 
-	}
-	
-	getAllPost(){
-		return this.http.post('/api/post/getAllPost',{})
-	}
+  }
+
+  getAllPost() {
+    return this.http.post('/api/post/getAllPost', {} );
+
+  }
 
 }

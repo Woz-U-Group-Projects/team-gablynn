@@ -9,18 +9,16 @@ import { HttpClient } from '@angular/common/http';
 export class SubscribeDataService {
   constructor(private http: HttpClient) {}
 
-  url: string = "http://localhost:3000/subscriber";
+  url = 'http://localhost:3000/subscriber';
 
-  subscribers: Subscribe[] = [{FirstName: "Gabby", LastName: "Swanson", Email: "gabrielle.swasnon94@gmail.com"} ];
+  subscribers: Subscribe[] = [{FirstName: 'Gabby', LastName: 'Swanson', Email: 'gabrielle.swasnon94@gmail.com'} ];
 
 
-  getSubscribe() : Observable<Subscribe[]> {
+  getSubscribe(): Observable<Subscribe[]> {
     return this.http.get<Subscribe[]>(this.url);
-    //return of(this.subscribers);
   }
 
-  addSubscribe(subscribe : Subscribe) {
-    //this.subscribers.push(subscribe)
+  addSubscribe(subscribe: Subscribe) {
     this.http.post<Subscribe>(this.url, subscribe).subscribe(result => this.subscribers.push(result));
   }
 }

@@ -11,7 +11,7 @@ export class SubscribeListComponent implements OnInit {
 
   subscribers: Subscribe[];
 
-  constructor(private subscribeDataService : SubscribeDataService) {
+  constructor(private subscribeDataService: SubscribeDataService) {
     subscribeDataService.getSubscribe().subscribe(s => (this.subscribers = s));
    }
 
