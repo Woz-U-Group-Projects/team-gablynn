@@ -10,30 +10,25 @@
   providers: [ MinimalismPostService ]
 })
  export class MinimalismComponent implements OnInit {
-  //  ngOnInit(): void {
-  //    throw new Error("Method not implemented.");
-  //  }
-    
-  public posts : any [];
+  public posts: any [];
 
   constructor(private minimalismPostService: MinimalismPostService, private submitPostService: SubmitPostService) {
-    let root = document.documentElement;
-    root.style.setProperty("--bg-image","url(https://www.listenmoneymatters.com/wp-content/uploads/2014/11/LMM-Cover-Images-6.jpg)");
+    const root = document.documentElement;
+    root.style.setProperty('--bg-image', 'url(https://www.listenmoneymatters.com/wp-content/uploads/2014/11/LMM-Cover-Images-6.jpg)');
   }
 
-  ngOnInit(){
-   	this.getAllPost();
-
+  ngOnInit() {
+     this.getAllPost();
      this.submitPostService.postAdded_Observable.subscribe(res => {
        this.getAllPost();
      });
   }
 
-   getAllPost(){
-   	this.minimalismPostService.getAllPost().subscribe(result => {
-   		console.log('result is ', result);
-   		this.posts = result['data'];
-   	});
+   getAllPost() {
+    this.minimalismPostService.getAllPost().subscribe(result => {
+    console.log('result is ', result);
+    this.posts = result['data'];
+    });
    }
 
  }

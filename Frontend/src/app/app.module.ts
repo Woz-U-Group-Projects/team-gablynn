@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRouting } from 'src/app/app-routing.module';
-import { FormsModule} from "@angular/forms";
-import { HttpClientModule } from "@angular/common/http";
+import { FormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { LoginComponent } from './components/login/login.component';
 import { AppComponent } from './app.component';
@@ -39,7 +39,7 @@ import { SubmitPostService } from './components/posts/submit-post.service';
     LoginComponent,
   ],
   imports: [
-    BrowserModule, FormsModule, AppRouting, HttpClientModule, 
+    BrowserModule, FormsModule, AppRouting, HttpClientModule,
   ],
 
   providers: [SubmitPostService, CommentsService],

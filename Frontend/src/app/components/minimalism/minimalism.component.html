@@ -4,9 +4,8 @@
 
         <app-posts></app-posts>
         <br>
-        <br>
         <app-comments></app-comments>
-    
+
 <div class="list-group">
 
   <a *ngFor="let post of posts" href="#" class="list-group-item list-group-item-action flex-column align-items-start">
@@ -17,5 +16,5 @@
       <p class="mb-1">{{post.description}}</p>
       <small>read more...</small>
   </a>
- 
+
 </div>

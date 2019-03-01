@@ -1,9 +1,9 @@
-import { Component, ViewChild, ElementRef, OnInit, TemplateRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit} from '@angular/core';
 import { SubmitPostService } from 'src/app/components/posts/submit-post.service';
 import { Post } from '../../../../models/post.model';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { TopicList } from '../../../../models/topic-list.model'
+import { TopicList } from '../../../../models/topic-list.model';
 
 
 @Component({
@@ -13,19 +13,27 @@ import { TopicList } from '../../../../models/topic-list.model'
   providers: [ SubmitPostService ]
 })
 export class PostsComponent implements OnInit {
-  
 
-
-  constructor(private submitPostService: SubmitPostService, private router: Router){}
+  constructor(private submitPostService: SubmitPostService, private router: Router) {}
   topicList: TopicList[] = [
     {id: 1, name: 'Minimalism'},
     {id: 2, name: 'Travel Hacks'},
-  ]
+  ];
   posts: Post[];
   submitPost: Post = new Post();
 
-  @ViewChild("fileInput")
+  @ViewChild('fileInput')
   fileInput;
+
+  notHidden = false;
+
+  unhide() {
+    this.notHidden = true;
+  }
+
+  hide() {
+    this.notHidden = false;
+  }
 
   onFileChanged($event) {
     this.submitPost.image = $event.target.files[0];
@@ -36,10 +44,9 @@ export class PostsComponent implements OnInit {
   }
 
   onSubmit() {
-    //console.log('hello world');
     console.log(this.submitPost);
     this.submitPostService.addPost(this.submitPost).subscribe(f => {
-      if (this.submitPost.topics == "Minimalism") {
+      if (this.submitPost.topics === 'Minimalism') {
         this.router.navigate(['/', 'minimalism']);
       } else {
         this.router.navigate(['/', 'travelhacks']);
@@ -50,8 +57,7 @@ export class PostsComponent implements OnInit {
     });
   }
 
- 
-  	ngOnInit() {
+  ngOnInit() {
       this.getPost();
     }
 

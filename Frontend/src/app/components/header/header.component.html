@@ -1,6 +1,6 @@
 <header>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-    
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,20 +25,10 @@
             <a class="nav-link" href="contact/">Contact</a>
         </li>
       </ul>
-    <img src="assets/img/follower_counter.png" alt="followers">
-
-  <!-- 
-    <p class="navbar-text">{{ subscribers.length }} subscribers</p>
-
-       <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form> -->
- 
-
-      <p class="navbar-text">{{ subscribers.length }} subscribers</p>
-      <button class="btn btn-link">Logout</button>
-    
+      <div class="left-nav">
+        <p class="navbar-text"><img src="assets/img/follower_counter.png" alt="followers"> {{ subscribers.length }} subscribers</p>
+        <button class="btn btn-link">Logout</button>
+    </div>
     <!--
         <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search">

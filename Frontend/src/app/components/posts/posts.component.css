@@ -1,0 +1,9 @@
+#close-btn{
+  float: right;
+}
+
+form {
+  width: 600px;
+  margin: auto;
+  position: relative;
+}
