@@ -22,18 +22,11 @@ export class PostsComponent implements OnInit {
   posts: Post[];
   submitPost: Post = new Post();
 
+// tslint:disable-next-line: member-ordering
   @ViewChild('fileInput')
   fileInput;
 
   notHidden = false;
-
-  unhide() {
-    this.notHidden = true;
-  }
-
-  hide() {
-    this.notHidden = false;
-  }
 
   onFileChanged($event) {
     this.submitPost.image = $event.target.files[0];
@@ -55,6 +48,14 @@ export class PostsComponent implements OnInit {
       this.fileInput.nativeElement.value = null;
       this.getPost();
     });
+  }
+
+  unhide() {
+    this.notHidden = true;
+  }
+
+  hide() {
+    this.notHidden = false;
   }
 
   ngOnInit() {
