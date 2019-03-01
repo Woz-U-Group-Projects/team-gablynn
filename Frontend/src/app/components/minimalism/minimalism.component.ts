@@ -13,18 +13,12 @@
   //  ngOnInit(): void {
   //    throw new Error("Method not implemented.");
   //  }
-
-  constructor() {
-    let root = document.documentElement;
-    root.style.setProperty("--bg-image","url(https://www.listenmoneymatters.com/wp-content/uploads/2014/11/LMM-Cover-Images-6.jpg)");
-   }
-
-  ngOnInit() {
     
   public posts : any [];
 
   constructor(private minimalismPostService: MinimalismPostService, private submitPostService: SubmitPostService) {
-  	
+    let root = document.documentElement;
+    root.style.setProperty("--bg-image","url(https://www.listenmoneymatters.com/wp-content/uploads/2014/11/LMM-Cover-Images-6.jpg)");
   }
 
   ngOnInit(){
@@ -34,8 +28,6 @@
        this.getAllPost();
      });
   }
-
-
 
    getAllPost(){
    	this.minimalismPostService.getAllPost().subscribe(result => {

@@ -1,4 +1,3 @@
-import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { Component, ViewChild, ElementRef, OnInit, TemplateRef } from '@angular/core';
 import { SubmitPostService } from 'src/app/components/posts/submit-post.service';
 import { Post } from '../../../../models/post.model';
@@ -15,19 +14,8 @@ import { TopicList } from '../../../../models/topic-list.model'
 })
 export class PostsComponent implements OnInit {
   
-  modalRef: BsModalRef;
 
-  openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template, { class: 'modal-md' });
-    console.log(this.modalRef);
-  }
 
-  closeModal(){
-    console.log(this.modalRef);
-    this.modalRef.hide();
-  }
-
-  constructor(private modalService: BsModalService) { }
   constructor(private submitPostService: SubmitPostService, private router: Router){}
   topicList: TopicList[] = [
     {id: 1, name: 'Minimalism'},

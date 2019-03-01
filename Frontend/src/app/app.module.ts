@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppRouting } from 'src/app/app-routing.module';
 import { FormsModule} from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
-import { ModalModule } from 'ngx-bootstrap/modal';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { LoginComponent } from './components/login/login.component';
 import { AppComponent } from './app.component';
@@ -38,10 +36,10 @@ import { SubmitPostService } from './components/posts/submit-post.service';
     HeaderComponent,
     HomeComponent,
     LikesComponent,
+    LoginComponent,
   ],
   imports: [
-    BrowserModule, FormsModule, AppRouting, HttpClientModule, ModalModule.forRoot(), NgbModule,
-    LoginComponent,
+    BrowserModule, FormsModule, AppRouting, HttpClientModule, 
   ],
 
   providers: [SubmitPostService, CommentsService],

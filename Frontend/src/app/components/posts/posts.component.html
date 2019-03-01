@@ -1,6 +1,5 @@
 <button type="button" class="btn btn-primary" (click)="openModal(template)">Create Post</button>
 
-<ng-template #template>
 <div class="post-header">
     <h4>Create Post</h4>
     <button type="button" class="close pull right" aria-label="Close" (click)="modalRef.hide()">
@@ -8,7 +7,7 @@
     </button>
 </div>
 
-<div class="post-form">
+
   <form>
 <div class="PostForm">
  
@@ -49,31 +48,13 @@
       </div>
       <div class="form-group">
           <label>Description</label>
-<<<<<<< HEAD
-          <textarea name="description" class="form-control" placeholder="Type Text Here"></textarea>
-      </div>
-
-      
-      <button type="button" class="btn btn-success btn-md" (click)="onUpload()">Post</button> 
-=======
           <textarea  name="description" required [(ngModel)]="submitPost.description" #description="ngModel" id="description" class="form-control" placeholder="Type Text Here"></textarea>
           <div class="alert alert-danger" *ngIf="description.touched && !description.valid">Description is required.</div>
         </div>
         
       <button type="submit" class="btn btn-primary">Post</button>
        
->>>>>>> gabby
   </form>
 </div><br>
 
-<<<<<<< HEAD
-<div class="post-footer">
-    <button type="button" class="btn btn-default btn-sm" (click)="modalRef.hide()">Close</button>
-</div>
-</ng-template>
-=======
   <router-outlet></router-outlet>
-</div>
-
-<router-outlet></router-outlet>
->>>>>>> gabby
