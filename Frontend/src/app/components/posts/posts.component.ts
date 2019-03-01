@@ -1,7 +1,6 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
 import { PostsService } from '../../services/posts.service';
 import { HttpClient } from 'selenium-webdriver/http';
-import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-posts',
@@ -9,20 +8,17 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent implements OnInit {
-  
-  modalRef: BsModalRef;
+  notHidden = false;
 
-  openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template, { class: 'modal-md' });
-    console.log(this.modalRef);
+  unhide(){
+    this.notHidden = true;
   }
 
-  closeModal(){
-    console.log(this.modalRef);
-    this.modalRef.hide();
+  hide(){
+    this.notHidden = false;
   }
 
-  constructor(private modalService: BsModalService) { }
+  constructor() { }
 
   ngOnInit() {
   }
