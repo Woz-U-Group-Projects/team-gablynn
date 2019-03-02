@@ -8,19 +8,7 @@ h1{
     color: white;
 }
 
-h5{
-    color: white;
-}
-
 
 img {
     max-width: 400px;
-}
-
-p {
-    color:white;
-    background-color:black;
-    opacity: 0.5;
-   filter: alpha(opacity=50);
-
 }
