@@ -18,17 +18,17 @@
   }
 
   ngOnInit() {
-     this.getAllPost();
-     this.submitPostService.postAdded_Observable.subscribe(res => {
-       this.getAllPost();
-     });
+    this.getAllPost();
+    //  this.submitPostService.postAdded_Observable.subscribe(res => {
+    //    this.getAllPost();
+    //  });
   }
 
-   getAllPost() {
+  getAllPost() {
     this.minimalismPostService.getAllPost().subscribe(result => {
-    console.log('result is ', result);
-    this.posts = result['data'];
+      console.log("result is ", result);
+      this.posts = result;
     });
-   }
+  }
 
  }

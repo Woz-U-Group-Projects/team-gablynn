@@ -16,3 +16,11 @@ h5{
 img {
     max-width: 400px;
 }
+
+p {
+    color:white;
+    background-color:black;
+    opacity: 0.5;
+   filter: alpha(opacity=50);
+
+}
