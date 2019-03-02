@@ -11,6 +11,8 @@
 })
  export class MinimalismComponent implements OnInit {
   public posts: any [];
+  data: any = [];
+  delRow;
 
   constructor(private minimalismPostService: MinimalismPostService, private submitPostService: SubmitPostService) {
     const root = document.documentElement;
@@ -30,5 +32,14 @@
       this.posts = result;
     });
   }
+
+
+  delete(row){
+    console.log(row);
+    this.delRow = this.data.indexOf(row);
+    this.data.splice(this.delRow,1);
+    console.log(this.data);
+
+}
 
  }
