@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class MinimalismPostService {
+export class TravelhacksPostService {
 
     constructor(private http: HttpClient) {
 

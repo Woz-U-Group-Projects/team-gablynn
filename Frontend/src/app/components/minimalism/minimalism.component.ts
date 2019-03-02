@@ -28,16 +28,16 @@
 
   getAllPost() {
     this.minimalismPostService.getAllPost().subscribe(result => {
-      console.log("result is ", result);
+      console.log('result is ', result);
       this.posts = result;
     });
   }
 
 
-  delete(row){
+  delete(row) {
     console.log(row);
     this.delRow = this.data.indexOf(row);
-    this.data.splice(this.delRow,1);
+    this.data.splice(this.delRow, 1);
     console.log(this.data);
 
 }
