@@ -14,6 +14,7 @@ var app = express();
 
 // serve the angular application
 //app.use(express.static(path.join(__dirname, "frontend/dist")));
+app.use("/public", express.static("public/uploads"));
 
 app.use(logger('dev'));
 app.use(express.json());

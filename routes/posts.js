@@ -29,7 +29,10 @@ router.get("/", function(req, res, next) {
 
 router.post("/", upload.single("image"), function(req, res, next) {
   let submitPost = new models.Post();
-   submitPost.name = req.body.name;
+   console.log(req.body);
+   submitPost.description = req.body.description;
+   submitPost.title = req.body.title;
+   submitPost.topic = req.body.topic;
    submitPost.image =
     req.protocol + "://" + req.get("host") + "/public/" + req.file.filename;
 

@@ -29,9 +29,11 @@
       <div class="form-group">
           <label>Post Topic</label>
           <form>
-          <select id="topicList" name= "topicList"
+          <select 
+          [(ngModel)]="submitPost.topics"
+          id="topicList" name= "topicList"
           class="form-control">
-            <option *ngFor='let topic oftopicList' [value]='topic.id'>
+            <option *ngFor='let topic of topicList' [value]='topic.name'>
               {{topic.name}}
             </option>
         </select>

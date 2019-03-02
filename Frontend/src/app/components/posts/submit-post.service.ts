@@ -20,7 +20,9 @@ export class SubmitPostService {
   addPost(submitPost: Post): Observable<Post> {
     const formData = new FormData();
     formData.append('image', submitPost.image);
-    formData.append('name', submitPost.name);
+    formData.append('title', submitPost.title);
+    formData.append('description', submitPost.description);
+    formData.append('topic', submitPost.topics);
     return this.http.post<Post>(this.url, formData);
   }
 
