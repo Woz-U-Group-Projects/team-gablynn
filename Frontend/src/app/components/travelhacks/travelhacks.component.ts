@@ -9,9 +9,16 @@ import { SubmitPostService } from 'src/app/components/posts/submit-post.service'
   providers: [ TravelhacksPostService ]
 })
 export class TravelhacksComponent implements OnInit {
+
+  postLikes = 0;
+
   public posts: any [];
   data: any = [];
   delRow;
+
+  onPostLikesUpdate = function(event) {
+    this.postLikes = event;
+  };
 
   constructor(private travelhacksPostService: TravelhacksPostService, private submitPostService: SubmitPostService) {
     const root = document.documentElement;

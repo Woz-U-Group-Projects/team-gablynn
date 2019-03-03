@@ -20,7 +20,7 @@ footer {
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: rgb(54, 56, 59); 
+    background-color: rgb(54, 56, 59);
     overflow-x: hidden; /* Disable horizontal scroll */
     margin-top: 100px;
   }
@@ -54,7 +54,7 @@ footer {
     transition: all 0.3s ease-in-out;
 }
 
-.social-icons.icon-circle .fa{ 
+.social-icons.icon-circle .fa{
     border-radius: 50%;
 }
 .social-icons.icon-rounded .fa{
@@ -68,16 +68,16 @@ footer {
     color: #FFF;
     -webkit-box-shadow: 1px 1px 3px #333;
     -moz-box-shadow: 1px 1px 3px #333;
-    box-shadow: 1px 1px 3px #333; 
+    box-shadow: 1px 1px 3px #333;
 }
-.social-icons.icon-zoom .fa:hover, .social-icons.icon-zoom .fa:active { 
+.social-icons.icon-zoom .fa:hover, .social-icons.icon-zoom .fa:active {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
-.social-icons.icon-rotate .fa:hover, .social-icons.icon-rotate .fa:active { 
+.social-icons.icon-rotate .fa:hover, .social-icons.icon-rotate .fa:active {
     -webkit-transform: scale(1.2) rotate(360deg);
     -moz-transform: scale(1.2) rotate(360deg);
     -ms-transform: scale(1.2) rotate(360deg);
@@ -86,9 +86,9 @@ footer {
 }
 
 .social-icons .fa-instagram{background-color: #f442ce;}
-.social-icons .fa-facebook,.social-icons .fa-facebook-square{background-color:#3C599F;}  
-.social-icons .fa-twitter,.social-icons .fa-twitter-square{background-color:#32CCFE;} 
-.social-icons .fa-linkedin,.social-icons .fa-linkedin-square{background-color:#0085AE;} 
+.social-icons .fa-facebook,.social-icons .fa-facebook-square{background-color:#3C599F;}
+.social-icons .fa-twitter,.social-icons .fa-twitter-square{background-color:#32CCFE;}
+.social-icons .fa-linkedin,.social-icons .fa-linkedin-square{background-color:#0085AE;}
 
 #like-button{
     border-radius: 8px;
@@ -106,3 +106,18 @@ footer {
     background-color: lightcoral;
 }
 
+#deletePostButton{
+  float: right;
+}
+
+#deletePostButton:hover{
+  color: darkred;
+}
+
+#editPostButton{
+  float: right;
+}
+
+#editPostButton:hover{
+  color: darkblue;
+}

@@ -8,6 +8,14 @@ h1{
     color: white;
 }
 
+h5{
+    color: white;
+}
+
+.list-group h5{
+  color: darkslategray;
+}
+
 
 img {
     max-width: 400px;

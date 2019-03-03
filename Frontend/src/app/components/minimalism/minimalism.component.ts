@@ -10,14 +10,21 @@
   providers: [ MinimalismPostService ]
 })
  export class MinimalismComponent implements OnInit {
-  public posts: any [];
-  data: any = [];
-  delRow;
 
   constructor(private minimalismPostService: MinimalismPostService, private submitPostService: SubmitPostService) {
     const root = document.documentElement;
     root.style.setProperty('--bg-image', 'url(https://www.listenmoneymatters.com/wp-content/uploads/2014/11/LMM-Cover-Images-6.jpg)');
   }
+
+  postLikes = 0;
+
+  public posts: any [];
+  data: any = [];
+  delRow;
+
+  onPostLikesUpdate = function(event) {
+    this.postLikes = event;
+  };
 
   ngOnInit() {
     this.getAllPost();

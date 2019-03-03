@@ -42,4 +42,21 @@ router.post("/", upload.single("image"), function(req, res, next) {
     .catch(error => res.status(400).send(error));
 });
 
+router.delete('/Post/:id/delete', (req, res) => {
+  let postid = parseInt(req.params.id);
+  models.Post.update(
+    {
+      Deleted: 'true'
+    },
+    {
+      where: {
+        PostID: postid
+      }
+    }
+  )
+  .then(title => {
+    res.redirect('/post');
+  });
+});
+
 module.exports = router;

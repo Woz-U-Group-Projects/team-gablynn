@@ -1,5 +1,5 @@
 export class Post {
-    // [x: string]: string;	
+    // [x: string]: string;
 // constructor(){
 //     this.id = '';
 //     this.title = '';
@@ -13,6 +13,6 @@ export class Post {
     name: string;
     title: string ;
     description: string;
-    topics: string; //"minimalism" or "travel hacks"
+    topics: string; // "minimalism" or "travel hacks"
     image: string | any;
 }

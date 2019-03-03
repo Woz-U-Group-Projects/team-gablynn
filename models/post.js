@@ -9,7 +9,10 @@ module.exports = (sequelize, DataTypes) => {
     title: DataTypes.STRING,
     description: DataTypes.STRING,
     image: DataTypes.STRING,
-    topic: DataTypes.STRING
+    topic: DataTypes.STRING,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE,
+    Deleted: DataTypes.BOOLEAN
   }, {});
   
   Post.associate = function(models) {

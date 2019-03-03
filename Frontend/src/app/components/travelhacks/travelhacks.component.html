@@ -9,17 +9,19 @@
 
     <div class="list-group">
 
-      <a *ngFor="let post of posts" href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+      <div *ngFor="let post of posts" href="#" class="list-group-item list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
               <h5 class="mb-1">{{post.title}}</h5>
               <br>
           </div>
           <img src="{{ post.image }}" />
           <p class="mb-1">{{post.description}}</p>
-      </a>
-
-
-        <button (click)="delete('row')">Delete</button>
+          <app-likes [numberOfLikes]="postLikes"
+                  (change)="onPostLikesUpdate($event)">
+          </app-likes>
+          <button id="deletePostButton" class="glyphicon glyphicon-trash" (click)="delete('row')">Delete</button>
+          <button id="editPostButton" class="glyphicon glyphicon-edit" (click)="delete('row')">Edit</button>
+      </div>
 
 
     </div>
