@@ -15,6 +15,10 @@ import { TopicList } from '../../../../models/topic-list.model';
 export class PostsComponent implements OnInit {
 
   constructor(private submitPostService: SubmitPostService, private router: Router) {}
+
+  confirmationString = 'Post has been added! Refresh Page';
+    isAdded = false;
+
   topicList: TopicList[] = [
     {id: 1, name: 'Minimalism'},
     {id: 2, name: 'Travel Hacks'},
@@ -34,6 +38,7 @@ export class PostsComponent implements OnInit {
 
   getPost() {
     this.submitPostService.getPost().subscribe(f => (this.posts = f));
+
   }
 
   onSubmit() {
@@ -47,6 +52,7 @@ export class PostsComponent implements OnInit {
       this.submitPost = new Post();
       this.fileInput.nativeElement.value = null;
       this.getPost();
+      this.isAdded = true;
     });
   }
 

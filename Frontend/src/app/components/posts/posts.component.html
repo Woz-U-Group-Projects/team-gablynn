@@ -48,6 +48,9 @@
       <button type="submit" class="btn btn-success">Post</button>
 
   </form>
+
+  <br>
+  <h5 *ngIf="isAdded">{{confirmationString}}</h5>
 </div>
 
   <router-outlet></router-outlet>

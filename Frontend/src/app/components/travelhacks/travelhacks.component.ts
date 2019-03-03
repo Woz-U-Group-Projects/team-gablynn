@@ -21,6 +21,7 @@ export class TravelhacksComponent implements OnInit {
   };
 
   constructor(private travelhacksPostService: TravelhacksPostService, private submitPostService: SubmitPostService) {
+
     const root = document.documentElement;
     root.style.setProperty(
       '--bg-image', 'url(https://botanalytics.co/blog/wp-content/uploads/2017/06/1.jpeg)'
