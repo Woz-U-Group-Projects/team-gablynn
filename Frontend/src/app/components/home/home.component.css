@@ -1,0 +1,27 @@
+img {
+   float: none;
+}
+
+.div {
+    clear: left;
+ }
+
+ .clearfix {
+    overflow: auto;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  .box {
+    float: right;
+    width: 50%; /* three boxes (use 25% for four, and 50% for two, etc) */
+    padding: 5px; /* if you want space between the images */
+  }
+
+  .sub_button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
