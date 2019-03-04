@@ -22,13 +22,13 @@ export class MinimalismPostService {
     return this.http.get<Post[]>('http://localhost:3000/posts', {});
   }
 
-  deletePost(post: Post | string): Observable<Post> {
-    const title = typeof post === 'string' ? post : post.title;
-    const url = `${this.postUrl}/${title}`;
-    return this.http.delete<Post>(url, httpOptions).pipe(
-      tap(_ => this.log(`deleted post title=${title}`)),
-      catchError(this.handleError<Post>('deletePost'))
-    );
-  }
+  // deletePost(post: Post | string): Observable<Post> {
+  //   const title = typeof post === 'string' ? post : post.title;
+  //   const url = `${this.postUrl}/${title}`;
+  //   return this.http.delete<Post>(url, httpOptions).pipe(
+  //     tap(_ => this.log(`deleted post title=${title}`)),
+  //     catchError(this.handleError<Post>('deletePost'))
+  //   );
+  // }
 
 }

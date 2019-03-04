@@ -44,20 +44,20 @@ import { map } from 'rxjs/operators';
   }
 
 
-  deletePost(post) {
-    const posts = this.posts;
+  // deletePost(post) {
+  //   const posts = this.posts;
 
-    this.minimalismPostService.deletePost(post.title)
+  //   this.minimalismPostService.deletePost(post.title)
     // .map(res => res.json())
     // .subscribe(data => {
       // if (data.n === 1) {
        // for (let i = 0; i < posts.length; i++) {
        //   if (posts [i].title === post.title) {
         //    posts.splice(i, 1);
-          }
-        }
+        //   }
+        // }
     //  }
   //  });
  // }
 
-// }
+}
