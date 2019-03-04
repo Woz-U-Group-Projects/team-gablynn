@@ -1,7 +1,10 @@
- import { Component, OnInit } from '@angular/core';
- import { MinimalismPostService } from 'src/app/components/minimalism/minimalism-post.service';
- import { Post } from '../../../../models/post.model';
- import { SubmitPostService } from 'src/app/components/posts/submit-post.service';
+import { Component, OnInit } from '@angular/core';
+import { MinimalismPostService } from 'src/app/components/minimalism/minimalism-post.service';
+import { Post } from '../../../../models/post.model';
+import { SubmitPostService } from 'src/app/components/posts/submit-post.service';
+import { Title } from '@angular/platform-browser';
+import { map } from 'rxjs/operators';
+
 
  @Component({
    selector: 'app-minimalism',
@@ -41,12 +44,20 @@
   }
 
 
-  delete(row) {
-    console.log(row);
-    this.delRow = this.data.indexOf(row);
-    this.data.splice(this.delRow, 1);
-    console.log(this.data);
+  deletePost(post) {
+    const posts = this.posts;
 
-}
+    this.minimalismPostService.deletePost(post.title)
+    // .map(res => res.json())
+    // .subscribe(data => {
+      // if (data.n === 1) {
+       // for (let i = 0; i < posts.length; i++) {
+       //   if (posts [i].title === post.title) {
+        //    posts.splice(i, 1);
+          }
+        }
+    //  }
+  //  });
+ // }
 
- }
+// }

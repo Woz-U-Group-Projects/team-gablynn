@@ -26,6 +26,7 @@ export class SubmitPostService {
     return this.http.post<Post>(this.url, formData);
   }
 
+
 }
 
 

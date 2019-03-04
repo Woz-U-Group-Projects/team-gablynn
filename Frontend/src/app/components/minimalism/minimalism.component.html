@@ -5,7 +5,7 @@
         <app-posts></app-posts>
         <br>
         <br>
-        <app-comments></app-comments>
+
 
 <div class="list-group">
 
@@ -16,11 +16,13 @@
       </div>
       <img src="{{ post.image }}" />
       <p class="mb-1">{{post.description}}</p>
+      <button id="deletePostButton" class="glyphicon glyphicon-trash" (click)="deletePost(post)">Delete</button>
+          <button id="editPostButton" class="glyphicon glyphicon-edit">Edit</button><br>
       <app-likes [numberOfLikes]="postLikes"
                   (change)="onPostLikesUpdate($event)">
       </app-likes>
-      <button id="deletePostButton" class="glyphicon glyphicon-trash" (click)="delete('row')">Delete</button>
-          <button id="editPostButton" class="glyphicon glyphicon-edit" (click)="delete('row')">Edit</button>
+      <app-comments></app-comments>
+
   </div>
 
 </div>
